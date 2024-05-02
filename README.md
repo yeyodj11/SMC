@@ -1,2 +1,1 @@
-# SMC
-NCC_SMC
+
