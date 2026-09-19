@@ -24,7 +24,8 @@
           <li><a href="PopularApps.php"> Media Apps</a></li>
           <li><a href="ParentsHelp.php">Parent's Help</a></li>
           <li><a href="Livestreaming.php">Livestream</a></li>
-          <li><a  href="Guidance.php">Guidance</a></li>  
+          <li><a  href="Guidance.php">Guidance</a></li>
+          <li><a href="ReferralCash.php">Referral Cash</a></li>
           <li><a href="Contact.php">Contact</a></li>
           <li class="dropdown">
             <a href="">Trends</a>
