@@ -89,6 +89,24 @@ $database ='CREATE TABLE IF NOT EXISTS loginlogs (
             }
 
             
+$database = 'CREATE TABLE IF NOT EXISTS referrals (
+  id int(7) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  referrer_user_id int(7) NOT NULL,
+  referrer_username varchar(30) NOT NULL,
+  referral_code varchar(20) NOT NULL,
+  referred_name varchar(100) NOT NULL,
+  referred_email varchar(100) NOT NULL,
+  status ENUM(\'pending\', \'converted\', \'paid\') NOT NULL DEFAULT \'pending\',
+  commission_amount decimal(10,2) NOT NULL DEFAULT 0.00,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=latin1';
+
+          if ($smcprojectbd->query($database) === TRUE) {
+              echo '<p class="success">referrals table created successfully</p>';
+          } else {
+              echo '<p class="error">Error creating table: ' . $smcprojectbd->error . '</p>';
+          }
+
             header('Location: register.php');
 
 // echo "<p><a  class='login' href='login.php'>Login</a></p><br/>";
